@@ -7,15 +7,24 @@
   "license": "MIT",
   "productName": "Test Electron App",
   "scripts": {
-    "start:dev": "cross-env NODE_ENV=development electronmon ."
+    "start:dev": "cross-env NODE_ENV=development electronmon .",
+    "package": "electron-builder --dir",
+    "make": "electron-builder"  
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   },
   "dependencies": {
-    "electron": "^24.2.0",
     "resize-img": "^2.0.0",
     "toastify-js": "^1.12.0"
   },
   "devDependencies": {
+    "electron": "^24.2.0",
     "cross-env": "^7.0.3",
+    "electron-builder": "^23.6.0",
     "electronmon": "^2.0.2"
   }
 }
