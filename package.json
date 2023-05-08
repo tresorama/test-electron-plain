@@ -7,15 +7,24 @@
   "license": "MIT",
   "productName": "Test Electron App",
   "scripts": {
-    "start:dev": "cross-env NODE_ENV=development electronmon ."
+    "start:dev": "cross-env NODE_ENV=development electronmon .",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
-    "electron": "^24.2.0",
+    "electron-squirrel-startup": "^1.0.0",
     "resize-img": "^2.0.0",
     "toastify-js": "^1.12.0"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
     "cross-env": "^7.0.3",
+    "electron": "^24.2.0",
     "electronmon": "^2.0.2"
   }
 }
